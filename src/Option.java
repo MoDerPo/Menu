@@ -11,7 +11,11 @@ public class Option {
         this.description = description;
     }
 
-    public Option(String label) {
+    public Option(String label, String description) {
+        this(label, genShortcut(label), description);
+    }
+
+    public Option(String label){
         this(label, genShortcut(label), label);
     }
 }
